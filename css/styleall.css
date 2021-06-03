@@ -4102,6 +4102,17 @@ footer{
 
 @media(max-width:360px){
   
+  .main-container h1{
+    font-size: 28px;
+    line-height: 38px;
+  }
+  
+  .main-container p{
+    width: 100%;
+    font-size: 16px;
+    line-height: 23px;
+  }
+  
   .training-container .row{
       width: 100%;
   }
