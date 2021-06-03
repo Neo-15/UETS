@@ -1,0 +1,203 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+.video_overlay{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 98;
+	background: rgba(0,0,0,0.5);
+	right: 0;
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+	/*transition: 0.3s ease;*/
+}
+
+.popup-active-overflow .video_overlay{
+	opacity: 1;
+	visibility: visible;
+	cursor: pointer;
+	/*transition: 0.3s ease;*/
+}
+.popap-video{
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	/*transition: 0.5s ease;*/
+	top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+.popap-video.popup-active{
+    /*transition: 0.5s ease;*/
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+}
+.popap-video.popup-active.fullscreen{
+	width: 100%;
+	height: 100%;
+}
+.popap-video.popup-active.fullscreen .popup{
+	margin: 0px;
+}
+.popap-video.popup-active.fullscreen .popup-close{
+	display: none;
+}
+.popap-video.popup-active #video{
+	width: 820px;
+	height: 460px;
+}
+.popap-video.popup-active.fullscreen #video{
+	width: 100%;
+	height: calc(100% - 40px);
+}
+#video-controls{
+	position: absolute;
+    bottom: -36px;
+    left: 0;
+    right: -15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background: #0B0B0B;
+}
+#videoContainer.fullscreen{
+	text-align: center;
+}
+#videoContainer.fullscreen #video{
+	width: auto;
+    height: calc(100% - 40px);
+    margin: auto;
+}
+#videoContainer.fullscreen #video-controls{
+	bottom: 0;
+	right: 0;
+}
+#video-controls .stop{
+	display: none;
+}
+#video-controls #playpause img{
+	width: 11px;
+}
+#video-controls #playpause{
+	width: 44px;
+	height: 40px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	background: #FFBD29;
+	border: none;
+	cursor: pointer;
+}
+.progress{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    height: 40px;
+}
+#video-controls .progress .timer_now, #video-controls .progress .timer_all{
+	font-family: Sofia Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0px 16px;
+}
+#video-controls .progress #progress{
+	width: 100%;
+    height: 4px;
+    border: none;
+    background: #fff !important;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+#video-controls .progress #progress #progress-bar{
+	background: rgb(255, 189, 41);
+    height: 4px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+#video-controls #mute{
+	background: transparent;
+    border: none;
+    padding: 0px;
+    width: 16.5px;
+    cursor: pointer;
+    margin-right: 18px;
+}
+#video-controls #fs{
+	background: transparent;
+    border: none;
+    padding: 0px;
+    width: 15px;
+    margin-right: 13px;
+    cursor: pointer;
+}
+#video-controls #mute img, #video-controls #mute img{
+	display: block;
+	width: 16px;
+	cursor: pointer;
+}
+#video-controls #mute img.mute{
+	display: none;
+}
+@media (max-width: 990px){
+	.popap-video.popup-active #video{
+		width: 768px;
+    	height: 431px;
+	}
+}
+@media (max-width: 768px){
+	.popap-video.popup-active #video{
+		width: 570px;
+    	height: 320px;
+	}
+}
+@media (max-width: 580px){
+	.popap-video.popup-active #video{
+		width: 320px;
+    	height: 179px;
+	}
+	#video-controls{
+		right: -7px;
+	}
+}
